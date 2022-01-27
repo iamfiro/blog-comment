@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+    margin: 0px;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 35px;
+    width: 40px;
+    border-radius: 100px;
+}
+
+.name {
+    font-family: 'Dongle', sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.header {
+    width: 100%;
+    height: 65px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+}
+
+.view {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.Title {
+    font-size: 40px;
+    color: #272727;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 1px;
+    font-family: 'Noto Sans KR', sans-serif!important;
+}
+
+.content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Description {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+    color: rgb(187, 187, 187);
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif!important;
+    margin-bottom: 40px;
+}
+
+.time {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+    color: rgb(43, 43, 43);
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif!important;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0,0,0,.07);
+}
+.imgDiv {
+    width: 100%;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+}
+.mainImg {
+    height: 100%;
+    width: 96%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.donation {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    border: 1.5px solid #FF7171;
+    color: #FF7171;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (min-width: 950px) {
+    .view {
+        width: 950px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .icon {
+        width: 30px;
+        margin-left: 20px;
+    }
+    .name {
+        font-size: 25px
+    }
+    .header {
+        height: 55px;
+    }
+    .Title {
+        font-size: 33px;
+    }
+    .Description {
+        font-size: 16px
+    }
+    .time {
+        font-size: 16px
+    }
+}
+@media screen and (max-width: 950px) {
+    .view {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .mainImg {
+        width: 92%;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="/node_modules/highlight.js/styles/atom-one-dark">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://i.ibb.co/x7kzyQv/09f07e3d0efcf799483f685c5d4e40be-1.webp" class="icon">
+            <span class="name">anojds</span>
+        </div>
+        <div class="view">
+            <p class="Title"><%= title %></p>
+            <p class="Description"><%= desc %></p>
+            <p class="time"><%= time %></p>
+            <div class="imgDiv">
+            <img class="mainImg" src="<%= mainImg %>">
+        </div>
+        <div class="content">
+            <%- post %>
+            <div class="donation">
+                <img src="https://i.ibb.co/JqfRVKL/3643770-favorite-heart-like-likes-love-icon.png" style="width: 20px;margin-right:10px">
+                도네이션
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
