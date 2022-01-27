@@ -2,10 +2,10 @@ const fs = require('fs');
 const express = require('express')
 const app = express()
 const ejs = require('ejs')
-const hljs = require("highlight.js");
+const hljs = require("./highlight.js");
 const port = process.env.PORT;
  
-app.listen(port,function(){
+app.listen('3000',function(){
     console.log("start express server on port 3000")
 })
 
@@ -59,7 +59,7 @@ app.get('/',function (req,res) {
 
 
 
-app.get('/post/:id',function (req,res) {
+app.get(`/post/:id`,function (req,res) {
     var obj = JSON.parse(fs.readFileSync('./data/json/' + req.params.id + '.json', "utf8"))
     var mdobj = fs.readFileSync('./data/md/' + req.params.id + '.md','utf8')
     const convertedBody = md.render(mdobj);
