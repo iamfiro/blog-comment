@@ -59,7 +59,7 @@ app.get('/',function (req,res) {
 
 
 
-app.get(`/post/:id`,function (req,res) {
+app.get('/post/:id',function (req,res) {
     var obj = JSON.parse(fs.readFileSync('./data/json/' + req.params.id + '.json', "utf8"))
     var mdobj = fs.readFileSync('./data/md/' + req.params.id + '.md','utf8')
     const convertedBody = md.render(mdobj);
